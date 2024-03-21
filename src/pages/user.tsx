@@ -30,7 +30,7 @@ const UserPage: React.FC<Props> = ({ ban, users }) => {
 
   return (
     <div>
-      <h5 onClick={() => alert(1)}>user: {pathname} {ban}</h5>
+      <h5 onClick={() => alert(1)}>user: {pathname}</h5>
       <input type="text" value={label} onChange={e => setLabel(e.target.value)} />
       <div>
         <ul>
