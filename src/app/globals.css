@@ -31,3 +31,11 @@ body {
     text-wrap: balance;
   }
 }
+
+input {
+  font-size: 12px;
+  outline: none;
+  color: #999;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
