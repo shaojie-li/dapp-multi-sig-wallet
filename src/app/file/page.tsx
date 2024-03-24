@@ -1,3 +1,4 @@
+"use client";
 import React, { ChangeEvent, useState } from 'react'
 import SparkMD5 from 'spark-md5';
 
@@ -42,7 +43,7 @@ export default function Files() {
             formData.append("size", size + '');
             formData.append("offset", offset + '');
             
-            fetch("http://localhost:3000/api/upload", {
+            fetch("/api/upload", {
                 headers:{},
                 method: 'POST',
                 body: formData

@@ -1,3 +1,4 @@
+"use client";
 import React from 'react'
 
 export default function JsonDemo() {
@@ -25,7 +26,7 @@ export default function JsonDemo() {
     }
 
   return (
-    <div onClick={() => requestJSONP('http://localhost:3000/api/jsonp')}>
+    <div onClick={() => requestJSONP('/api/jsonp')}>
       <button>Jsonp</button>
 
       <button>get user</button>

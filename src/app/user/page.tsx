@@ -5,12 +5,8 @@ import type { users as Users } from '@prisma/client';
 import Head from 'next/head';
 import UserList from '@/components/user-list';
 
-interface Props {
-  ban: string
-  users: Users[]
-}
 
-const UserPage: React.FC<Props> = ({ ban, users }) => {
+const UserPage: React.FC = () => {
   const pathname = usePathname()
   const [label, setLabel] = useState('start')
 

@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect } from 'react'
 
 export default function Baize (){
@@ -5,7 +6,7 @@ export default function Baize (){
     import('@/lib/baize').then(Baize => {
       console.log('BBBB', Baize.default);
       
-      Baize.default.init({dns: 'http://localhost:3003/report', apikey: 'ccc'})
+      Baize.default.init({dns: '/api/report', apikey: 'ccc'})
     })
   }, [])
 
@@ -20,7 +21,7 @@ export default function Baize (){
 
   return (
     <div>
-      <button onClick={() => requestUser('http://localhost:3000/api/get-user')}>get user</button>
+      <button onClick={() => requestUser('/api/get-user')}>get user</button>
 
       <button onClick={fakeHandler}>fakeHandler</button>
     </div>
