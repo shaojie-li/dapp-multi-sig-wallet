@@ -6,7 +6,10 @@ const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
 const UserList: React.FC = () => {
   const { data, error, isLoading } = useSWR<users[]>('/api/get-user', fetcher, {
-    refreshInterval: 1000,
+    refreshInterval: 5000,
+    shouldRetryOnError: true,
+    errorRetryInterval: 2000,
+    errorRetryCount: 10
   })
   
   return (
