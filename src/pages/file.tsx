@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useEffect, useState } from 'react'
+import React, { ChangeEvent, useState } from 'react'
 import SparkMD5 from 'spark-md5';
 
 export default function Files() {

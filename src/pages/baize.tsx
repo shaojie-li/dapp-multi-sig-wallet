@@ -1,7 +1,6 @@
-"use client";
 import React, { useEffect } from 'react'
 
-export default () => {
+export default function Baize (){
   useEffect(() => {
     import('@/lib/baize').then(Baize => {
       console.log('BBBB', Baize.default);

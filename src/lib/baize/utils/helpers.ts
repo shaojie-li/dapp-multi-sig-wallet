@@ -195,7 +195,7 @@ export function isHttpFail(code: number) {
  * @param url
  * @param query
  */
-export function setUrlQuery(url: string, query: object) {
+export function setUrlQuery(url: string, query: any) {
     const queryArr: string[] = []
     Object.keys(query).forEach(k => {
         queryArr.push(`${k}=${query[k]}`)

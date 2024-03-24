@@ -12,6 +12,7 @@ export class Logger {
 
             logType.forEach(level => {
                 if (!(level in _global.console!)) return
+                // @ts-ignore
                 this._console[level] = _global.console![level]
             })
         }

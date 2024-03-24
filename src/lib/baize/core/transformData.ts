@@ -55,6 +55,6 @@ export function resourceTransform(target: ResourceErrorTarget): ReportDataType {
         message: `资源地址: ${target.src!.slice(0, 100) || target.href!.slice(0, 100)}`,
         level: SeverityEnum.Low,
         time: getTimestamp(),
-        name: `${resourceMap[target.localName!] || target.localName}加载失败`,
+        name: `${resourceMap[target.localName! as keyof (typeof resourceMap)] || target.localName}加载失败`,
     }
 }

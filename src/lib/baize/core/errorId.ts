@@ -72,7 +72,7 @@ function objectOrder(reason: any) {
     return Object.keys(obj)
       .sort()
       .reduce((_, key) => {
-        const result = {};
+        const result = {} as Record<string, any>;
         if (variableTypeDetection.isObject(obj[key])) {
           result[key] = sortFn(obj[key]);
         } else {
