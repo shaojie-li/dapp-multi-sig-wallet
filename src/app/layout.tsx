@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Web3Container from "./Web3Container";
+import { Session } from "next-auth";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,13 +14,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  session
 }: Readonly<{
   children: React.ReactNode;
+  session: Session
 }>) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Web3Container><StrictMode>{children}</StrictMode></Web3Container>
+        <Web3Container>
+          <StrictMode>
+            {children}
+          </StrictMode>
+        </Web3Container>
       </body>
     </html>
   );

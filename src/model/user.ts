@@ -1,8 +1,6 @@
 import { users } from "@prisma/client"
 import {prisma} from '@/model/prisma';
 
-console.log('prisma.users.findMany', prisma.users);
-
 export const getUsers = async () => {
     const users = await prisma.users.findMany();
     return users;
