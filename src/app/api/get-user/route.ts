@@ -1,7 +1,7 @@
-import { getUsers, insertUser } from "@/model/user";
 import { users } from "@prisma/client";
+import { getUsers, insertUser } from "@/model/user";
 
-export async function GET(req: Request) {
+export async function GET(req: Request, res: Response) {
     const users = await getUsers();
     return Response.json(users)
 } 

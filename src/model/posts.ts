@@ -1,5 +1,5 @@
 import { TestIfUppercase } from '@prisma/client';
-import { prisma } from './prisma';
+import {prisma} from '@/model/prisma';
 
 export const getPosts = async () => {
     const posts = await prisma.testIfUppercase.findMany({
